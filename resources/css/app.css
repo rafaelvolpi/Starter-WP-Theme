@@ -1,0 +1,13 @@
+/* @import "fonts.css";
+@import "text.css";
+@import "buttons.css";
+@import "inputs.css";
+@import "accordion.css";
+@import "nav.css";
+@import "gforms.css";
+@import "transitions.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;

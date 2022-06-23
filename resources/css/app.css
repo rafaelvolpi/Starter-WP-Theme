@@ -11,3 +11,36 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+* {
+  @apply transition-all duration-300;
+}
+
+body {
+  @apply font-default;
+}
+
+h1 {
+  @apply text-5xl uppercase leading-tight;
+}
+
+h2 {
+  @apply text-4xl font-extralight leading-tight;
+}
+
+h3 {
+  @apply text-3xl font-extralight leading-tight;
+}
+
+h4 {
+  @apply text-2xl font-extralight leading-tight;
+}
+
+b, strong {
+  @apply font-bold;
+}
+
+p {
+  @apply leading-normal;
+}
+

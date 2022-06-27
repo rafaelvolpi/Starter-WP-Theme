@@ -50,14 +50,26 @@
 
     <div class="my-1">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
-        <portfolio-item
-          v-for="(item, i) in more_portfolio"
-          :key="i"
-          :uri="item.link"
-          :client="item.client"
-          :campaign="item.name"
-          :image="item.thumbnail.medium_large"
-        />
+        <template v-if="portfolio_relacionado">
+          <portfolio-item
+            v-for="(item, i) in portfolio_relacionado"
+            :key="i"
+            :uri="item.link"
+            :client="item.client"
+            :campaign="item.name"
+            :image="item.thumbnail.medium_large"
+          />
+        </template>
+        <template v-else>
+          <portfolio-item
+            v-for="(item, i) in more_portfolio"
+            :key="i"
+            :uri="item.link"
+            :client="item.client"
+            :campaign="item.name"
+            :image="item.thumbnail.medium_large"
+          />
+        </template>
       </div>
     </div>
   </section>
@@ -74,7 +86,7 @@
   import InsideBanner from '../Components/InsideBanner'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
   export default {
-    props: ["banner", "portfolio", "more_portfolio"],
+    props: ["banner", "portfolio", "more_portfolio", "portfolio_relacionado"],
     components: {
       Carousel,
       Slide,

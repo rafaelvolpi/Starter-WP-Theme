@@ -1,7 +1,7 @@
 <template>
   <main>
     <div id="sliders" class="hero w-screen h-screen bg-gray-800 text-gray-500">
-      <carousel :autoplay="5000">
+      <carousel :autoplay="4000" :wrapAround="true">
         <slide v-for="(item, i) in sliders" :key="i">
           <picture>
             <source :srcset="item.mobile ? item.mobile.medium_large : item.desktop.medium_large" media="(max-width: 768px)">

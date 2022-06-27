@@ -12,7 +12,7 @@
 @tailwind utilities;
 @tailwind variants;
 
-* {
+section:not(.carousel) * {
   @apply transition-all duration-300;
 }
 
@@ -44,3 +44,8 @@ p {
   @apply leading-normal;
 }
 
+.bricks-form__fieldset {
+  * {
+    @apply !font-default;
+  }
+}
